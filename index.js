@@ -55,8 +55,13 @@ async function fetchUserWeatherInfo(coordinates) {
         );
         const data = await response.json();
         loadingScreen.classList.remove("active");
-        userInfoContainer.classList.add("active");
-        renderWeatherInfo(data); 
+        if (response.ok) {
+            userInfoContainer.classList.add("active");
+            renderWeatherInfo(data);
+        } else {
+            alert(`City not found: "${city}". Please check the name and try again.`);
+        }
+        
     }
     catch (error) {
         console.log(error);
@@ -145,8 +150,12 @@ async function fetchSearchWeatherInfo(city) {
         );
         const data = await response.json();
         loadingScreen.classList.remove("active");
-        userInfoContainer.classList.add("active");
-        renderWeatherInfo(data);
+        if (response.ok) {
+            userInfoContainer.classList.add("active");
+            renderWeatherInfo(data);
+        } else {
+            alert(`City not found: "${city}". Please check the name and try again.`);
+        }
     } catch (error) {
         console.log(error);
         loadingScreen.classList.remove("active");
