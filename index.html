@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+
+    <div class="wrapper">
+
+
+        <h1 class="heading">Weather App</h1>
+        <div class="tabcontainer" tabcontainer>
+            <p class="userweather">Your weather</p>
+            <p class="searchweather">Search weather</p>
+        </div>
+
+        <div class="weathercontainer" weathercontainer>
+
+
+            <div class="grantlocation grantzero" grantlocation>
+                <img src="./assets/map.png" width="130" height="130" alt="">
+                <p class="lp1">Grant location access</p>
+                <p class="lp2">Allow access to get ur weather information</p>
+                <button class="grantaccess">
+                    Grant Access
+                </button>
+            </div>
+
+            <form class="formcontainer" formcontainer action="">
+                <input class="searchinput" placeholder="Enter the name of your city..." type="text" >
+                <button class="searchbtn" type="submit"><img src="./assets/magnifier.png" width="30" height="30" alt=""></button>
+            </form>
+
+            <div class="loadingcontainer" loadingcontainer>
+                <img src="./assets/global.gif" width="150" height="150" alt="">
+                <p>loading...</p>
+            </div>
+
+            <div class="infocontainer" infocontainer>
+
+                <div class="name">
+                    <p class="cityname"></p>
+                    <img  class="countryicon" width="60" height="40" alt="">
+                </div>
+                <div class="weatherbox">
+                    <p class="weatherdesc"></p>
+                    <img class="weathericon" alt="">
+                </div>
+
+                <p class="temperature"></p>
+
+                <div class="cardcontainer" cardcontainer>
+                    <div class="card">
+                        <img src="./assets/storm.png" width="70" height="70" alt="">
+                        <p class="p1">Wind speed</p>
+                        <p class="windspeed p2"></p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/humidity.png" width="70" height="70" alt="">
+                        <p class="p3">Humidity</p>
+                        <p class="humidity p4"></p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/cloudy.png" width="70" height="70" alt="">
+                        <p class="p5">Clouds</p>
+                        <p class="clouds p6"></p>
+                    </div>
+                </div>
+            </div>     
+        </div>      
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
