@@ -37,6 +37,7 @@
   color: white;
   padding: 0.5rem;
   padding-left: 1rem;
+  padding-right: 1rem;
   font-size: 1rem;
   font: bold;
 }
@@ -263,7 +264,10 @@
     
   }
   /* Form Container */
-  .formcontainer {
+  .formcontainer{
+    display: none;
+  }
+  .formcontainer.active {
       width: 100%;
       
       display: flex;
