@@ -1,205 +1,392 @@
 
-@import "tailwindcss";
+.body{
+  background-image: linear-gradient(
+        45deg,
+        hsl(223deg 100% 28%) 0%,
+        hsl(223deg 89% 29%) 8%,
+        hsl(224deg 77% 31%) 17%,
+        hsl(224deg 68% 33%) 25%,
+        hsl(224deg 60% 34%) 33%,
+        hsl(224deg 53% 35%) 42%,
+        hsl(223deg 46% 36%) 50%,
+        hsl(223deg 40% 37%) 58%,
+        hsl(223deg 34% 38%) 67%,
+        hsl(223deg 29% 39%) 75%,
+        hsl(222deg 23% 40%) 83%,
+        hsl(222deg 18% 40%) 92%,
+        hsl(222deg 12% 41%) 100%
+      );
+}
 
 .current{
-    background-color: rgb(65, 104, 161);
+  background-color: rgb(65, 104, 161);
 }
 .formcontainer{
-    display: none;
+  display: none;
 }
 .formcontainer.active{
-    display: flex;
-    justify-content: space-between;
-    width: 21vw;
-    
+  display: flex;
+  justify-content: space-between;
+  width: 21vw;
+  
 }
 .searchinput{
-    border: none;
-    border-radius: 8px;
-    background-color: rgb(65, 104, 161);
-    color: white;
-    padding: 0.5rem;
-    padding-left: 1rem;
-    font-size: 1rem;
-    font: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(65, 104, 161);
+  color: white;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font: bold;
 }
 .weathercontainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 .searchbtn{
-    all: unset;
-    background-color: rgb(65, 104, 161);
-    border-radius: 10px;
-    padding: 0.5rem;
+  all: unset;
+  background-color: rgb(65, 104, 161);
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 .searchbtn:hover{
-    
-    cursor: pointer;
+  
+  cursor: pointer;
 
 }
 .searchinput::placeholder{
-    color: rgb(206, 206, 206);
+  color: rgb(206, 206, 206);
 }
 .wrapper{
-    color: white;
-    background-image: linear-gradient(
-          45deg,
-          hsl(223deg 100% 28%) 0%,
-          hsl(223deg 89% 29%) 8%,
-          hsl(224deg 77% 31%) 17%,
-          hsl(224deg 68% 33%) 25%,
-          hsl(224deg 60% 34%) 33%,
-          hsl(224deg 53% 35%) 42%,
-          hsl(223deg 46% 36%) 50%,
-          hsl(223deg 40% 37%) 58%,
-          hsl(223deg 34% 38%) 67%,
-          hsl(223deg 29% 39%) 75%,
-          hsl(222deg 23% 40%) 83%,
-          hsl(222deg 18% 40%) 92%,
-          hsl(222deg 12% 41%) 100%
-        );
-    display: flex;
-    flex-direction: column;
-    font-family: "Mulish", sans-serif;
-    align-items: center; 
-    width: 100vw;   
-    gap: 1.6rem;
-    top: 2rem ;
-    height: 180vh;
-    
+  color: white;
+  
+  display: flex;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+  align-items: center; 
+  width: 100%;  
+  gap: 1.6rem;
+  top: 2rem ;
+  height: 180vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  
 }
 .tabcontainer{
-    display: flex;
-    justify-content: space-between;
-    width: 35%;
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
 }
-    
+  
 .heading{
-    font-size: 3rem;
-    font-weight: 900;
-    color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
 }
 
 
 .userweather{
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
 }
 .searchweather{
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;   
-    font-size: 1rem; 
-    font-weight:bold;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;   
+  font-size: 1rem; 
+  font-weight:bold;
 }
 .grantzero{
-    display: none;
+  display: none;
 }
 .grantzero.active{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .grantaccess:hover{
-    cursor: pointer;
+  cursor: pointer;
 }
 .lp1{
-    font-size: 1.2rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .lp2{
-    font-size: 1rem;
-    font-weight: 700;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .grantaccess{
-    border-radius: 9px;
-    padding: 0.8rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: rgb(65, 104, 161);
-    border-color: rgb(65, 104, 161);
-    color: white;
+  border-radius: 9px;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: rgb(65, 104, 161);
+  border-color: rgb(65, 104, 161);
+  color: white;
 }
 .weatherbox{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgb(65, 104, 161);
-    border-radius: 8px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    gap: 1rem;
-    font-weight: bold;
-    font-size: 1.04rem;
-    text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(65, 104, 161);
+  border-radius: 8px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1.04rem;
+  text-transform: capitalize;
 }
 .loadingcontainer{
-    display:none;
+  display:none;
 }
 .temperature{
-    font-size: 3.8rem;
-    font-weight: 900;
+  font-size: 3.8rem;
+  font-weight: 900;
 }
 .cardcontainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 120%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 120%;
 }
 .card{
-    
-    
-    font-weight: bold;
-    position: relative;
-    font-size: 1.05rem;
-    text-align: center;
-    background-color: rgb(65, 104, 161);
-    border-radius: 8px;
-    width: 10vw;
-    padding-top: 1.6rem;
+  
+  
+  font-weight: bold;
+  position: relative;
+  font-size: 1.05rem;
+  text-align: center;
+  background-color: rgb(65, 104, 161);
+  border-radius: 8px;
+  width: 12vw;
+  padding-top: 1.6rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 
 .loadingcontainer.active{
-    display: flex;
-    flex-direction: column;
-    top: 2rem;
-    align-items: center;
-    gap: 1rem;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  top: 2rem;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100vw;
 }
 .infocontainer{
-    display: none;
+  display: none;
 }
 .infocontainer.active{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
-    
-    
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  
+  
 }
 .name{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-    top: -20;
-    width: 25vw;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  top: -20;
+  width: 25vw;
 }
 .cityname{
-    font-size: 2rem;
-    font-weight: 900;
+  font-size: 2rem;
+  font-weight: 900;
+}
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  /* General Wrapper Layout */
+  .wrapper {
+      padding: 2rem 1rem;
+      height: auto; /* Adjusted height for mobile */
+      gap: 1.2rem; /* Slightly smaller gap between elements */
+  }
+
+  /* Heading */
+  .heading {
+      font-size: 2.5rem;
+      text-align: center;
+  }
+
+  /* Tab Container */
+  .tabcontainer {
+      flex-direction: column;
+      width: 80%; /* Adjusted width of the tab container */
+      justify-content: center;
+      align-items: center;
+      
+      gap: 1rem; /* Spaced out the tabs */
+      margin-bottom: 1.5rem;
+  }
+
+  /* Tabs */
+  .userweather,
+  .searchweather {
+      width: 50%;
+      font-size: 1.2rem;
+      padding: 1rem;
+      
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+  }
+
+  /* Weather box - gap between country flag and description */
+  .weatherbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem; /* Added gap between flag and description */
+  }
+  .body{
+    display: flex;
+    justify-content: center;
+    
+  }
+  /* Form Container */
+  .formcontainer {
+      width: 100%;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      
+      
+  }
+
+  .searchinput {
+      
+      padding: 0.8rem;
+      font-size: 1.2rem;
+  }
+
+  .searchbtn {
+      
+      padding: 0.8rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+  }
+
+  /* Weather Container */
+  .weathercontainer {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem; 
+  }
+
+  /* Cards - Mobile */
+  .cardcontainer {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+  }
+
+  .card {
+      width: 80%; /* Make the cards take up more space on mobile */
+      margin-bottom: 1rem;
+      font-size: 1rem;
+  }
+
+  /* Loading container */
+  .loadingcontainer.active {
+      width: 100%;
+      font-size: 1.8rem;
+  }
+
+  .infocontainer.active {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+  
+  }
+
+  /* Name section */
+  .name {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      
+  }
+
+  .cityname {
+      font-size: 1.8rem; /* Slightly smaller on mobile */
+  }
+
+  /* Prevent horizontal scrolling */
+  html, body {
+      overflow-x: hidden; /* Ensure no horizontal scroll */
+  }
+}
+
+/* For very small screens (Portrait mobile) */
+@media (max-width: 480px) {
+
+  /* Heading */
+  .heading {
+      font-size: 2rem;
+  }
+
+  /* Tab Container */
+  .tabcontainer {
+      width: 100%;
+  }
+
+  /* Weather Box */
+  .weatherbox {
+      gap: 0.8rem; /* Adjust the gap */
+  }
+
+  /* Weather Button Adjustments */
+  .userweather, .searchweather {
+      width: 100%;
+      font-size: 1rem;
+  }
+
+  /* Input and Button */
+  .searchinput, .searchbtn {
+      font-size: 1rem;
+  }
+
+  /* Card width adjustment */
+  .card {
+      width: 90%; /* Cards take up most of the screen */
+  }
+
+  /* City Name */
+  .cityname {
+      font-size: 1.5rem; /* Slightly smaller city name */
+  }
+  .infocontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
